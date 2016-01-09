@@ -9,19 +9,18 @@ import useScroll from 'scroll-behavior/lib/useStandardScroll';
 import createStore from './redux/create';
 import {Provider} from 'react-redux';
 import {reduxReactRouter, ReduxRouter} from 'redux-router';
+import routes from './routes';
 
-import getRoutes from './routes';
-import makeRouteHooksSafe from './helpers/makeRouteHooksSafe';
 
 // Three different types of scroll behavior available.
 // Documented here: https://github.com/rackt/scroll-behavior
 const scrollableHistory = useScroll(createHistory);
 
 const dest = document.getElementById('content');
-const store = createStore(reduxReactRouter, makeRouteHooksSafe(getRoutes), scrollableHistory, window.__data);
+const store = createStore(reduxReactRouter, routes, scrollableHistory, window.__data);
 
 const component = (
-  <ReduxRouter routes={getRoutes(store)} />
+  <ReduxRouter routes={routes} />
 );
 
 ReactDOM.render(
