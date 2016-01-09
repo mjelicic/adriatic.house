@@ -9,6 +9,7 @@
 // Custom Colors
 $cyan: #33e0ff;
 $humility: #777;
+$white: #fff;
 
 // Bootstrap Variables
 $brand-primary: darken(#428bca, 6.5%);
@@ -19,6 +20,29 @@ $brand-danger: #d9534f;
 $brand-info: #5bc0de;
 
 $text-color: #333;
+$section-text-color: $white;
 
 $font-size-base: 14px;
 $font-family-sans-serif: "Helvetica Neue", Helvetica, sans-serif;
+
+
+//$font-size-base: 75%;
+$font-size-medium: 62.5%;
+$font-family-sans-serif: "HelveticaNeue", "Helvetica Neue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-weight: 400;
+
+$small-device: 768px;
+$ex-small-device: 320px;
+
+
+@mixin small-device {
+  @media only screen and (max-width : $small-device) {
+    @content;
+  }
+}
+
+@mixin extra-small-device {
+  @media only screen and (max-width : $ex-small-device) {
+    @content;
+  }
+}

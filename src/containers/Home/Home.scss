@@ -1,5 +1,42 @@
 @import "../../theme/variables.scss";
 
 .home {
+  .jumbotron {
+    text-align: center;
+    margin-bottom: 0;
+  }
+}
 
+.section {
+  position: relative;
+  color: $section-text-color;
+  background-color: #245269;
+  height: 600px;
+
+  span {
+    font-size: 0.9em;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  a {
+    color: $section-text-color;
+    font-size: 1.3em;
+  }
+
+  @include small-device {
+    height: 200px;
+  }
+}
+
+.pool {
+  background-image: url('./pool.jpg');
+  background-size: cover;
+  background-position: bottom;
+}
+
+.apt1 {
+  background-image: url('./apt1.jpg');
+  background-size: cover;
+  background-position: center;
 }

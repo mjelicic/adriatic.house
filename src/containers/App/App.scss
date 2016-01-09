@@ -1,3 +1,18 @@
+:global {
+  @import '~normalize.scss/normalize.scss';
+  @import '../../theme/variables';
+
+  a {
+    text-decoration: none;
+    color: $text-color;
+
+    &:hover, &:focus, &:visited, &:active {
+      text-decoration: none;
+      color: $text-color;
+    }
+  }
+}
+
 .app {
   .brand {
     position: absolute;
