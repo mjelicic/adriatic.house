@@ -2,6 +2,19 @@
   @import '~normalize.scss/normalize.scss';
   @import '../../theme/variables';
 
+  body {
+    background: url(./beach_bg.jpg) no-repeat center center fixed;
+    background-color: #fff;
+    //background-size: auto 100%;
+    //background-size: cover;
+    //background-attachment: fixed;
+    background-position: center center;
+
+    //@include small-device {
+    //  background-attachment: scroll;
+    //}
+  }
+
   a {
     text-decoration: none;
     color: $text-color;
@@ -16,16 +29,14 @@
 .app {
   .brand {
     position: absolute;
-    $size: 40px;
-    top: 5px;
-    left: 5px;
+    $size: 90px;
+    top: -15px;
+    left: -19px;
     display: inline-block;
-    background: #2d2d2d url('../Home/logo.png') no-repeat center center;
+    background: url('../Home/logo.png') no-repeat center center;
+    background-size: 100%;
     width: $size;
     height: $size;
-    background-size: 80%;
-    margin: 0 10px 0 0;
-    border-radius: $size / 2;
   }
   nav :global(.fa) {
     font-size: 2em;

@@ -7,6 +7,30 @@
   }
 }
 
+.carousel {
+  max-width: 1920px;
+  margin: 0 auto;
+
+  span {
+    font-size: 1.2em;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  a {
+    color: $section-text-color;
+    font-size: 1.5em;
+  }
+
+  @include small-device {
+    display: none;
+  }
+}
+
+.caption {
+  padding-bottom: 50px;
+}
+
 .section {
   position: relative;
   color: $section-text-color;

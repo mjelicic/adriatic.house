@@ -26,6 +26,8 @@ export default class Html extends Component {
     return (
       <html lang="en-us">
         <head>
+          <meta charSet="utf-8"/>
+          <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
           {DocumentMeta.renderAsReact()}
 
           <link rel="shortcut icon" href="/favicon.ico" />

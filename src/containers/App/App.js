@@ -11,6 +11,10 @@ export default class App extends Component {
     children: PropTypes.object.isRequired
   };
 
+  componentDidMount() {
+    window.scrollTo(0, 1);
+  }
+
   render() {
     const styles = require('./App.scss');
     return (
@@ -19,7 +23,7 @@ export default class App extends Component {
         <Navbar fixedTop>
           <Navbar.Header>
             <Navbar.Brand>
-              <IndexLink to="/" activeStyle={{color: '#33e0ff'}}>
+              <IndexLink to="/" activeStyle={{color: '#0079c1'}}>
                 <div className={styles.brand}/>
                 <span>{config.app.title}</span>
               </IndexLink>
@@ -47,7 +51,9 @@ export default class App extends Component {
           </Navbar.Collapse>
         </Navbar>
 
-        {this.props.children}
+        <div className={styles.appContent}>
+          {this.props.children}
+        </div>
 
       </div>
     );
