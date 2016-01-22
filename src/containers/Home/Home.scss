@@ -25,10 +25,31 @@
   @include small-device {
     display: none;
   }
+
+  .caption {
+    padding-bottom: 50px;
+  }
 }
 
-.caption {
-  padding-bottom: 50px;
+.mobileSection {
+  display: none;
+
+  .mobileImage {
+    position: relative;
+
+    a {
+      color: $section-text-color;
+      font-size: 1.2em;
+    }
+
+    .caption {
+      padding-bottom: 20px;
+    }
+  }
+
+  @include small-device {
+    display: block;
+  };
 }
 
 .section {

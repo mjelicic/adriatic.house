@@ -64,6 +64,7 @@
     "express": "^4.13.3",
     "file-loader": "^0.8.5",
     "history": "1.13.1",
+    "opbeat": "^3.1.4",
     "piping": "^0.3.0",
     "pretty-error": "^1.2.0",
     "query-string": "^3.0.0",

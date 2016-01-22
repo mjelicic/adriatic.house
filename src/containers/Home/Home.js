@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Carousel, CarouselItem, Glyphicon} from 'react-bootstrap';
+import {Carousel, CarouselItem, Glyphicon, Image} from 'react-bootstrap';
 import classNames from 'classnames';
 
 export default class Home extends Component {
@@ -31,6 +31,26 @@ export default class Home extends Component {
             </div>
           </CarouselItem>
         </Carousel>
+        <div className={styles.mobileSection}>
+          <div className={styles.mobileImage}>
+            <Image alt="Pool house" src={poolImg} responsive />
+            <div className={captionClass}>
+              <a href="#">Learn More</a>
+              <Glyphicon glyph="menu-right" />
+              <a href="#">Book</a>
+              <Glyphicon glyph="menu-right" />
+            </div>
+          </div>
+          <div className={styles.mobileImage}>
+            <Image alt="Apartment 1" src={apt1Img} responsive />
+            <div className={captionClass}>
+              <a href="#">Learn More</a>
+              <Glyphicon glyph="menu-right" />
+              <a href="#">Book</a>
+              <Glyphicon glyph="menu-right" />
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

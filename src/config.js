@@ -12,6 +12,11 @@ const environment = {
 module.exports = Object.assign({
   host: process.env.HOST || 'localhost',
   port: process.env.PORT,
+  opbeat: {
+    organizationId: process.env.OPBEAT_ORG_ID,
+    appId: process.env.OPBEAT_APPID,
+    secretToken: process.env.OPBEAT_TOKEN
+  },
   app: {
     title: 'Adriatic House',
     description: 'Looking for a perfect vacation? Stay at the Adriatic House and rest like never before!',

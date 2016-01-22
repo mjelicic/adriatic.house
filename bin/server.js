@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 require('../server.babel'); // babel registration (runtime transpilation for node)
+var config = require('../src/config');
+
 var path = require('path');
 var rootDir = path.resolve(__dirname, '..');
 /**
@@ -17,6 +19,13 @@ if (__DEVELOPMENT__) {
     })) {
     return;
   }
+} else {
+  //Register opbeat monitoring
+  var opbeat = require('opbeat').start({
+    organizationId: config.opbeat.organizationId,
+    appId: config.opbeat.appId,
+    secretToken: config.opbeat.secretToken
+  });
 }
 
 // https://github.com/halt-hammerzeit/webpack-isomorphic-tools
